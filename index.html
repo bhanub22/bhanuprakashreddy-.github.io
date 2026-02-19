@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bhanu Prakash Reddy Aspiring Data Analyst | AI Model Builder | Machine Learning Enthusiast Portfolio</title>
+<title>Bhanu Prakash Reddy | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -12,7 +12,7 @@
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
-background:#0f172a;
+background:#1e293b;
 color:#e2e8f0;
 scroll-behavior:smooth;
 }
@@ -23,7 +23,7 @@ display:flex;
 align-items:center;
 gap:30px;
 padding:60px 8%;
-background:linear-gradient(135deg,#2563eb,#7c3aed);
+background:linear-gradient(135deg,#3b82f6,#8b5cf6);
 }
 
 header img{
@@ -52,84 +52,99 @@ font-weight:500;
 /* NAVIGATION */
 nav{
 text-align:center;
-padding:12px;
-background:#020617;
+padding:14px;
+background:#334155;
 }
 
 nav a{
-color:#38bdf8;
+color:#f1f5f9;
 margin:0 15px;
 text-decoration:none;
 font-weight:500;
 }
 
 nav a:hover{
-color:white;
+color:#ffffff;
 }
 
 /* SECTIONS */
 section{
-padding:40px 8%;
-margin:50px auto;
+padding:35px 8%;
+margin:45px auto;
 max-width:1100px;
-background:#1e293b;
-border-radius:18px;
+background:#334155;
+border-radius:16px;
+box-shadow:0 4px 18px rgba(0,0,0,0.25);
 }
 
 h2{
 color:#38bdf8;
-margin-bottom:12px;
+margin-bottom:18px;
 font-size:24px;
 }
 
 /* CARDS */
 .card{
-position:relative;
-padding:25px;
-margin-bottom:35px;
+background:rgba(255,255,255,0.08);
+padding:22px;
+margin-bottom:40px;
 border-radius:16px;
-background:rgba(255,255,255,0.05);
-backdrop-filter: blur(6px);
-overflow:hidden;
+backdrop-filter:blur(6px);
 }
 
-/* Background Image Layer */
-.card::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
+/* BACKGROUND CARDS */
+.education-bg .card{
+background:
+linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
+url('cmr-campus-bg.png');
 background-size:cover;
 background-position:center;
-opacity:0.25;  /* soft image */
-z-index:0;
+color:white;
 }
 
-/* Make text above image */
-.card *{
-position:relative;
-z-index:1;
+.oral-bg{
+background:
+linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
+url('oral-result.png');
+background-size:cover;
+background-position:center;
+color:white;
 }
 
-/* Individual Images */
-.oral-bg::before{
-background-image:url('oral-result.png');
+.chat-bg{
+background:
+linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
+url('ai-chat-bot-bg.png');
+background-size:cover;
+background-position:center;
+color:white;
 }
 
-.chat-bg::before{
-background-image:url('ai-chat-bot-bg.png');
+.smart-bg{
+background:
+linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
+url('smart-floor-bg.png');
+background-size:cover;
+background-position:center;
+color:white;
 }
 
-.smart-bg::before{
-background-image:url('smart-floor-bg.png');
+.skills span{
+display:inline-block;
+background:#3b82f6;
+padding:8px 14px;
+margin:6px;
+border-radius:8px;
+font-size:13px;
 }
 
-.education-bg .card::before{
-background-image:url('cmr-campus-bg.png');
+footer{
+text-align:center;
+padding:20px;
+background:#334155;
+font-size:14px;
+margin-top:40px;
 }
-
 
 </style>
 </head>
@@ -151,7 +166,6 @@ background-image:url('cmr-campus-bg.png');
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </nav>
-  
 
 <section id="about">
 <h2>About Me</h2>
@@ -159,30 +173,33 @@ background-image:url('cmr-campus-bg.png');
 I am deeply passionate about Data Analysis, Artificial Intelligence, and Big Data technologies. I specialize in leveraging Python and its powerful libraries such as Pandas, NumPy, and Matplotlib to extract meaningful insights from complex datasets. With a strong interest in AI-driven solutions, I focus on building and optimizing machine learning models using modern workflows and data-driven methodologies. I continuously explore advanced techniques in data preprocessing, model evaluation, and intelligent system design to solve real-world business problems efficiently and effectively.
 </p>
 </section>
-  
 
-<section id="education" class="cmr-campus-bg">
+<section id="education" class="education-bg">
 <h2>🎓 Education</h2>
 <div class="card">
 <h3>Bachelor's Degree</h3>
 <p><strong>Field:</strong> Computer Science and Engineering with AI/ML specialization</p>
-<p><strong>Institution:</strong> " CMR Technical Campus "</p>
+<p><strong>Institution:</strong> CMR Technical Campus</p>
 <p><strong>Location:</strong> Hyderabad | Telangana</p>
-<p><strong>Year:</strong>  2022 – 2026</p>
+<p><strong>Year:</strong> 2022 – 2026</p>
 </div>
 </section>
-  
 
 <section id="skills">
 <h2>Skills</h2>
 <div class="skills">
-<span>Python</span><span>Python</span><span>C/C++/Java</span>
-<span>Matplotlib</span><span>SQL</span><span>NoSQL</span><span>MongoDB</span>
-<span>EDA</span><span>Big Data</span><span>LLMs</span>
+<span>Python</span>
+<span>C/C++/Java</span>
+<span>Matplotlib</span>
+<span>SQL</span>
+<span>NoSQL</span>
+<span>MongoDB</span>
+<span>EDA</span>
+<span>Big Data</span>
+<span>LLMs</span>
 <span>AI Model Building</span>
 </div>
 </section>
-  
 
 <section id="projects">
 <h2>🚀 Projects</h2>
@@ -196,21 +213,18 @@ I am deeply passionate about Data Analysis, Artificial Intelligence, and Big Dat
 <li>Image preprocessing & augmentation</li>
 <li>Streamlit deployment for real-time prediction</li>
 </ul>
-</div> 
-  
-  
+</div>
 
 <div class="card chat-bg">
 <h3>🤖 AI-Based Dr. Chat Bot</h3>
 <ul>
 <li>Text & image input processing</li>
 <li>AI-agent simulated recommendation workflow</li>
-<li>Accurate response system</li>
+<li>87% accuracy response system</li>
 </ul>
 </div>
-  
 
-<div class="smart-floor-bg.">
+<div class="card smart-bg">
 <h3>🧹 Smart Floor Cleaning Robot (IoT)</h3>
 <ul>
 <li>Arduino-based autonomous navigation</li>
@@ -218,7 +232,6 @@ I am deeply passionate about Data Analysis, Artificial Intelligence, and Big Dat
 <li>Real-world robotics implementation</li>
 </ul>
 </div>
-  
 
 <div class="card">
 <h3>📈 Ongoing: AI Marketing Optimization Model</h3>
@@ -229,24 +242,17 @@ I am deeply passionate about Data Analysis, Artificial Intelligence, and Big Dat
 </ul>
 <p><strong>Status:</strong> In Development 🚧</p>
 </div>
-  
 
-
-  
 </section>
 
 <section id="contact">
-<h2>📫 Contact </h2>
+<h2>📫 Contact</h2>
 <p>
-🔗 <a href="https://www.linkedin.com/in/bhanuprakashb22" target="_blank">LinkedIn : https://www.linkedin.com/in/bhanuprakashb22 </a><br><br>
-📧 <a href="mailto:bhanuprakashreddyb22@email.com"> Email : bhanuprakashreddyb22@gmail.com</a><br><br>
-📍 Hyderabad , Telangana , India.
+🔗 <a href="https://www.linkedin.com/in/bhanuprakashb22" target="_blank">LinkedIn</a><br><br>
+📧 <a href="mailto:bhanuprakashreddyb22@gmail.com">bhanuprakashreddyb22@gmail.com</a><br><br>
+📍 Hyderabad, Telangana, India
 </p>
 </section>
-
-
-
-  
 
 <footer>
 © 2026 Bhanu Prakash Reddy | Built with GitHub Pages 🚀

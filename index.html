@@ -17,9 +17,32 @@ color:#e2e8f0;
 scroll-behavior:smooth;
 }
 
+/* NAVIGATION */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#020617;
+padding:15px;
+text-align:center;
+z-index:1000;
+}
+
+nav a{
+color:#38bdf8;
+margin:0 20px;
+text-decoration:none;
+font-weight:500;
+}
+
+nav a:hover{
+color:white;
+}
+
+/* HEADER */
 header{
 text-align:center;
-padding:60px 20px;
+padding:120px 20px 60px; /* extra top padding for fixed nav */
 background:linear-gradient(135deg,#2563eb,#7c3aed);
 }
 
@@ -36,6 +59,7 @@ margin:15px 0 5px;
 font-size:32px;
 }
 
+/* SECTIONS */
 section{
 padding:60px 12%;
 }
@@ -45,6 +69,7 @@ color:#38bdf8;
 margin-bottom:20px;
 }
 
+/* CARDS */
 .card{
 background:#1e293b;
 padding:25px;
@@ -67,11 +92,7 @@ border-radius:8px;
 font-size:14px;
 }
 
-a{
-color:#38bdf8;
-text-decoration:none;
-}
-
+/* BUTTON */
 .btn{
 display:inline-block;
 padding:10px 18px;
@@ -79,12 +100,14 @@ background:#7c3aed;
 color:white;
 border-radius:8px;
 margin-top:10px;
+text-decoration:none;
 }
 
 .btn:hover{
 background:#6d28d9;
 }
 
+/* FOOTER */
 footer{
 text-align:center;
 padding:20px;
@@ -97,21 +120,31 @@ font-size:14px;
 
 <body>
 
+<!-- NAVBAR -->
+<nav>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- HEADER -->
 <header>
 <img src="bhanu.jpg" alt="Bhanu Photo">
 <h1>Bhanu Prakash Reddy 👋</h1>
 <p>Aspiring Data Analyst | AI Model Builder | Machine Learning Enthusiast</p>
 </header>
 
-<section>
+<!-- ABOUT -->
+<section id="about">
 <h2>About Me</h2>
 <p>
 I am passionate about Data Analysis, Artificial Intelligence, and Big Data.
-I specialize in working with Python, Pandas, NumPy, and Matplotlib.
-I am building AI models and learning LLM workflows to solve real-world business problems using data-driven insights.
+I specialize in Python, Pandas, NumPy, and Matplotlib.
+Currently building AI models and learning LLM workflows to solve real-world business problems using data-driven insights.
 </p>
 </section>
 
+<!-- SKILLS -->
 <section>
 <h2>Skills</h2>
 <div class="skills">
@@ -128,47 +161,65 @@ I am building AI models and learning LLM workflows to solve real-world business 
 </div>
 </section>
 
-<section>
-<h2>Projects</h2>
+<!-- PROJECTS -->
+<section id="projects">
+<h2>🚀 Projects</h2>
 
 <div class="card">
-<h3>Sales Data Analysis</h3>
-<p><strong>Description:</strong> Cleaned and analyzed 10,000+ retail transactions to identify revenue trends and customer patterns.</p>
-<p><strong>Dataset:</strong> Sales transactions dataset including region, product category, and revenue.</p>
-<p><strong>Insights:</strong></p>
+<h3>🦷 Multi-Class Oral Disease Detection using CNN</h3>
+<p><strong>Description:</strong> Built a CNN-based multi-class classification model.</p>
+<p><strong>Accuracy:</strong> 92% Validation Accuracy</p>
 <ul>
-<li>Top revenue generating category identified</li>
-<li>Seasonal sales growth trends observed</li>
-<li>High performing regions detected</li>
+<li>Image preprocessing & feature extraction</li>
+<li>Model evaluation metrics implemented</li>
+<li>Deployed as Streamlit web application</li>
 </ul>
-<a class="btn" href="#">View Project</a>
+<a class="btn" href="https://github.com/yourusername/oral-disease-detection-cnn" target="_blank">View Project</a>
 </div>
 
 <div class="card">
-<h3>Price Trend Analysis</h3>
-<p><strong>Description:</strong> Analyzed time-based pricing trends to understand demand-driven price fluctuations.</p>
-<p><strong>Dataset:</strong> Historical pricing dataset over multiple time periods.</p>
-<p><strong>Insights:</strong></p>
+<h3>🤖 AI-Based Dr. Chat Bot</h3>
+<p><strong>Description:</strong> AI healthcare advisory chatbot handling text & image inputs.</p>
+<p><strong>Accuracy:</strong> 87%</p>
 <ul>
-<li>Peak-hour price increases</li>
-<li>Weekend demand effect</li>
-<li>Early booking reduces cost</li>
+<li>AI-agent workflow simulation</li>
+<li>Intelligent recommendation system</li>
+<li>Multi-input data handling</li>
 </ul>
-<a class="btn" href="#">View Project</a>
+<a class="btn" href="https://github.com/yourusername/ai-dr-chatbot" target="_blank">View Project</a>
+</div>
+
+<div class="card">
+<h3>🧹 Smart Floor Cleaning Robot (IoT)</h3>
+<p><strong>Description:</strong> Autonomous robot using Arduino & ultrasonic sensors.</p>
+<ul>
+<li>Real-time obstacle detection</li>
+<li>Autonomous navigation logic</li>
+<li>Hardware-software integration</li>
+</ul>
+<a class="btn" href="https://github.com/yourusername/smart-floor-cleaning-robot" target="_blank">View Project</a>
+</div>
+
+<div class="card">
+<h3>📈 Ongoing: AI Model for Smart Marketing Optimization</h3>
+<p>Building AI system to analyze advertisement performance & social media engagement.</p>
+<ul>
+<li>Ad performance prediction</li>
+<li>Customer segmentation</li>
+<li>AI-driven recommendation engine</li>
+</ul>
+<p><strong>Status:</strong> In Development 🚧</p>
 </div>
 
 </section>
 
-<section>
-<h2>Currently Learning</h2>
-<p>Machine Learning | Big Data Engineering | AI Model Workflows | Advanced Visualization</p>
-</section>
-
-<section>
-<h2>Contact</h2>
+<!-- CONTACT -->
+<section id="contact">
+<h2>📫 Contact</h2>
 <p>
-LinkedIn: <a href="#">Add Your LinkedIn Link</a><br>
-Email: yourmail@email.com
+🔗 <a href="https://www.linkedin.com/in/bhanuprakashb22" target="_blank">LinkedIn</a><br><br>
+📧 <a href="mailto:bhanuprakashreddyb22@email.com">bhanuprakashreddyb22@email.com</a><br><br>
+📍 Hyderabad, Telangana, India
 </p>
 </section>
 

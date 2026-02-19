@@ -35,36 +35,22 @@ object-fit:cover;
 h1{
 margin:12px 0 5px;
 font-size:32px;
-opacity:1;
-transition: all 0.5s ease;
+display:inline-block;
+transition: transform 1s ease;
 }
 
-/* NAVIGATION */
-nav{
-background:#020617;
-padding:12px;
-text-align:center;
-position:sticky;
-top:0;
-z-index:1000;
+/* Name movement */
+.move{
+transform: translateX(30px);
 }
 
-nav a{
-color:#38bdf8;
-margin:0 18px;
-text-decoration:none;
+/* Typing text fixed height to prevent jumping */
+#typing{
+height:28px;   /* fixed height prevents page jump */
+display:block;
 font-weight:500;
 }
 
-nav a:hover{
-color:white;
-}
-
-/* SECTIONS */
-section{
-padding:32px 10%;
-margin:0;
-}
 
 h2{
 color:#38bdf8;
@@ -174,8 +160,8 @@ font-size:13px;
 <section id="about" class="fade-in">
 <h2>About Me</h2>
 <p>
-I am passionate about Data Analysis, Artificial Intelligence & Big Data.
-I work with Python, Pandas, NumPy, Matplotlib and build AI models using modern ML workflows.
+I am deeply passionate about Data Analysis, Artificial Intelligence, and Big Data technologies. I specialize in leveraging Python and its powerful libraries such as Pandas, NumPy, and Matplotlib to extract meaningful insights from complex datasets.
+With a strong interest in AI-driven solutions, I focus on building and optimizing machine learning models using modern workflows and data-driven methodologies. I continuously explore advanced techniques in data preprocessing, model evaluation, and intelligent system design to solve real-world business problems efficiently and effectively.
 </p>
 </section>
   
@@ -185,9 +171,10 @@ I work with Python, Pandas, NumPy, Matplotlib and build AI models using modern M
 <section id="education" class="education-bg fade-in">
 <h2>🎓 Education</h2>
 <div class="card">
-<h3>Bachelor's Degree</h3>
-<p><strong>Field:</strong> Computer Science and Engineering with AI/ML specilazation  / IT</p>
-<p><strong>Institution:</strong> CMR Technical Campus</p>
+<h3> Bachelor's Degree </h3>
+<p><strong>Field:</strong>  Computer Science and Engineering with AI/ML specilazation </p>
+<p><strong>Institution:</strong> CMR Technical Campus </p>
+<p><strong>Location:</strong> Hyderabad ,Telangana </p>
 <p><strong>Year:</strong> 2022 – 2026</p>
 </div>
 </section>
@@ -220,6 +207,7 @@ I work with Python, Pandas, NumPy, Matplotlib and build AI models using modern M
 </ul>
 </div>
 
+  
 <div class="card smart-bg">
 <h3>🧹 Smart Floor Cleaning Robot (IoT)</h3>
 <ul>
@@ -229,6 +217,7 @@ I work with Python, Pandas, NumPy, Matplotlib and build AI models using modern M
 </ul>
 </div>
 
+  
 <div class="card chat-bg">
 <h3>🤖 AI-Based Dr. Chat Bot</h3>
 <ul>
@@ -238,6 +227,7 @@ I work with Python, Pandas, NumPy, Matplotlib and build AI models using modern M
 </ul>
 </div>
 
+  
 <div class="card">
 <h3>📈 Ongoing: AI Marketing Optimization Model</h3>
 <ul>
@@ -251,14 +241,16 @@ I work with Python, Pandas, NumPy, Matplotlib and build AI models using modern M
   
 </section>
 
+  
 <!-- CONTACT -->
 <section id="contact" class="fade-in">
 <h2>📫 Contact</h2>
 <p>
-🔗 <a href="https://www.linkedin.com/in/bhanuprakashb22" target="_blank">LinkedIn</a><br><br>
+🔗 <a href="https://www.linkedin.com/in/bhanuprakashb22" target="_blank">LinkedIn:https://www.linkedin.com/in/bhanuprakashb22</a><br><br>
 📧 <a href="mailto:bhanuprakashreddyb22@email.com">bhanuprakashreddyb22@email.com</a><br><br>
 📍 Hyderabad, Telangana, India
 </p>
+  
 </section>
 
   
@@ -269,20 +261,22 @@ I work with Python, Pandas, NumPy, Matplotlib and build AI models using modern M
 
 <script>
 
-/* Continuous Name Move */
+/* Smooth Continuous Name Movement */
 setInterval(() => {
 document.getElementById("mainName").classList.toggle("move");
 }, 5000);
 
 
-/* Typing Animation */
+/* Stable Typing Animation (No Layout Shift) */
 const textArray = [
 "Aspiring Data Analyst",
 "AI Model Builder",
 "Machine Learning Enthusiast"
 ];
 
-let typingIndex = 0, charIndex = 0, isDeleting = false;
+let typingIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
 function typeEffect() {
 const display = document.getElementById("typing");
@@ -292,7 +286,7 @@ if (!isDeleting) {
 display.textContent = current.substring(0, charIndex++);
 if (charIndex > current.length) {
 isDeleting = true;
-setTimeout(typeEffect, 1000);
+setTimeout(typeEffect, 1200);
 return;
 }
 } else {
@@ -302,22 +296,27 @@ isDeleting = false;
 typingIndex = (typingIndex + 1) % textArray.length;
 }
 }
-setTimeout(typeEffect, isDeleting ? 50 : 100);
+
+setTimeout(typeEffect, isDeleting ? 40 : 80);
 }
 
 typeEffect();
 
 
-/* Scroll Fade Animation */
+/* Fade-in Animation (Stable) */
 const faders = document.querySelectorAll('.fade-in');
 const observer = new IntersectionObserver(entries => {
 entries.forEach(entry => {
-if (entry.isIntersecting) entry.target.classList.add('visible');
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
 });
-});
+},{ threshold: 0.2 });
+
 faders.forEach(fader => observer.observe(fader));
 
 </script>
+
 
 </body>
 </html>

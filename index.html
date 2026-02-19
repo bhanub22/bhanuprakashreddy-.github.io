@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bhanu Prakash Reddy | Data Analyst Portfolio</title>
+<title>Bhanu Prakash Reddy Aspiring Data Analyst | AI Model Builder | Machine Learning Enthusiast Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -17,41 +17,18 @@ color:#e2e8f0;
 scroll-behavior:smooth;
 }
 
-/* NAVIGATION */
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:#020617;
-padding:15px;
-text-align:center;
-z-index:1000;
-}
-
-nav a{
-color:#38bdf8;
-margin:0 20px;
-text-decoration:none;
-font-weight:500;
-}
-
-nav a:hover{
-color:white;
-}
-
 /* HEADER */
 header{
 text-align:center;
-padding:120px 20px 60px;
+padding:90px 20px 40px;
 background:linear-gradient(135deg,#2563eb,#7c3aed);
-overflow:hidden;
 }
 
 header img{
-width:160px;
-height:160px;
+width:150px;
+height:150px;
 border-radius:50%;
-border:5px solid white;
+border:4px solid white;
 object-fit:cover;
 }
 
@@ -61,66 +38,88 @@ font-size:32px;
 transition:transform 1.5s ease;
 }
 
-/* Animation after 5 seconds */
+/* Continuous Name Move */
 .move{
-transform:translateX(50px);
+transform:translateX(40px);
+}
+
+/* NAVIGATION (after header) */
+nav{
+background:#020617;
+padding:12px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav a{
+color:#38bdf8;
+margin:0 18px;
+text-decoration:none;
+font-weight:500;
+}
+
+nav a:hover{
+color:white;
 }
 
 /* SECTIONS */
 section{
-padding:60px 12%;
+padding:35px 12%;
 }
 
 h2{
 color:#38bdf8;
-margin-bottom:20px;
+margin-bottom:15px;
+}
+
+/* Fade Animation */
+.fade-in{
+opacity:0;
+transform:translateY(20px);
+transition:all 1s ease;
+}
+
+.fade-in.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 /* CARDS */
 .card{
 background:#1e293b;
-padding:25px;
-margin-bottom:25px;
-border-radius:15px;
-box-shadow:0 8px 20px rgba(0,0,0,0.4);
-transition:0.3s;
+padding:22px;
+margin-bottom:20px;
+border-radius:14px;
+box-shadow:0 6px 16px rgba(0,0,0,0.4);
 }
 
-.card:hover{
-transform:translateY(-5px);
+/* Oral Project Background */
+.oral-bg{
+background:
+linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+url('oral-result.png');
+background-size:cover;
+background-position:center;
 }
 
+/* SKILLS */
 .skills span{
 display:inline-block;
 background:#2563eb;
-padding:8px 14px;
-margin:6px;
+padding:7px 12px;
+margin:5px;
 border-radius:8px;
-font-size:14px;
-}
-
-/* BUTTON */
-.btn{
-display:inline-block;
-padding:10px 18px;
-background:#7c3aed;
-color:white;
-border-radius:8px;
-margin-top:10px;
-margin-right:10px;
-text-decoration:none;
-}
-
-.btn:hover{
-background:#6d28d9;
+font-size:13px;
 }
 
 /* FOOTER */
 footer{
 text-align:center;
-padding:20px;
+padding:18px;
 background:#020617;
-font-size:14px;
+font-size:13px;
 }
 
 </style>
@@ -128,7 +127,14 @@ font-size:14px;
 
 <body>
 
-<!-- NAVBAR -->
+<!-- HEADER -->
+<header>
+<img src="bhanu.jpg" alt="Bhanu Photo">
+<h1 id="mainName">Bhanu Prakash Reddy 👋</h1>
+<p id="typing"></p>
+</header>
+
+<!-- NAVIGATION -->
 <nav>
 <a href="#about">About</a>
 <a href="#education">Education</a>
@@ -136,42 +142,28 @@ font-size:14px;
 <a href="#contact">Contact</a>
 </nav>
 
-<!-- HEADER -->
-<header>
-<img src="bhanu.jpg" alt="Bhanu Photo">
-<h1 id="mainName">Bhanu Prakash Reddy 👋</h1>
-<p>Aspiring Data Analyst | AI Model Builder | Machine Learning Enthusiast</p>
-</header>
-
 <!-- ABOUT -->
-<section id="about">
+<section id="about" class="fade-in">
 <h2>About Me</h2>
 <p>
 I am passionate about Data Analysis, Artificial Intelligence, and Big Data.
-I specialize in Python, Pandas, NumPy, and Matplotlib.
-Currently building AI models and learning LLM workflows to solve real-world business problems using data-driven insights.
+I work with Python, Pandas, NumPy, and Matplotlib and build AI models using modern ML techniques.
 </p>
 </section>
 
 <!-- EDUCATION -->
-<section id="education">
+<section id="education" class="fade-in">
 <h2>🎓 Education</h2>
-
 <div class="card">
 <h3>Bachelor's Degree</h3>
-<p><strong>Field:</strong> Computer Science and Engineering with AI/ML specialization </p>
-<p><strong>Institution:</strong> CMR TECHNICAL CAMPUS</p>
+<p><strong>Field:</strong> Computer Science and Engineering</p>
+<p><strong>Institution:</strong> CMR TCHNICAL CAMPUS</p>
 <p><strong>Year:</strong> 2022 – 2026</p>
-<p>
-Focused on Artificial Intelligence, Machine Learning, Data Analysis, and IoT systems.
-Completed multiple academic and practical AI-based projects.
-</p>
 </div>
-
 </section>
 
 <!-- SKILLS -->
-<section>
+<section class="fade-in">
 <h2>Skills</h2>
 <div class="skills">
 <span>Python</span>
@@ -181,63 +173,44 @@ Completed multiple academic and practical AI-based projects.
 <span>Big Data</span>
 <span>LLMs</span>
 <span>AI Model Building</span>
-<span>ui</span>
 </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section id="projects" class="fade-in">
 <h2>🚀 Projects</h2>
 
-<div class="card">
+<div class="card oral-bg">
 <h3>🦷 Multi-Class Oral Disease Detection using CNN</h3>
-<p><strong>Description:</strong> CNN-based oral disease classification system using EfficientNet-B3.</p>
 <p><strong>Accuracy:</strong> 92% Validation Accuracy</p>
-
 <ul>
+<li>EfficientNet-B3 CNN architecture</li>
+<li>Trained on 4,963 dental images</li>
 <li>Image preprocessing & augmentation</li>
-<li>Feature extraction</li>
-<li>Trained on 4,963 labeled dental images</li>
-<li>Deployed using Streamlit</li>
+<li>Real-time Streamlit deployment</li>
 </ul>
-
-<h4>📸 Project Screenshots</h4>
-
-<img src="oral-home.png" width="100%" style="border-radius:10px; margin-bottom:15px;">
-<img src="oral-upload.png" width="100%" style="border-radius:10px; margin-bottom:15px;">
-<img src="oral-result.png" width="100%" style="border-radius:10px; margin-bottom:15px;">
-
-<a class="btn" href="https://your-streamlit-link.com" target="_blank">Live Demo</a>
-<a class="btn" href="https://github.com/yourusername/oral-disease-detection-cnn" target="_blank">View Code</a>
-
 </div>
 
 <div class="card">
 <h3>🤖 AI-Based Dr. Chat Bot</h3>
-<p><strong>Description:</strong> AI healthcare advisory chatbot handling text & image inputs.</p>
-<p><strong>Accuracy:</strong> 87%</p>
 <ul>
+<li>Text & image input handling</li>
 <li>AI-agent workflow simulation</li>
-<li>Intelligent recommendation system</li>
-<li>Multi-input data handling</li>
+<li>87% response accuracy</li>
 </ul>
-<a class="btn" href="https://github.com/yourusername/ai-dr-chatbot" target="_blank">View Code</a>
 </div>
 
 <div class="card">
 <h3>🧹 Smart Floor Cleaning Robot (IoT)</h3>
-<p><strong>Description:</strong> Autonomous robot using Arduino & ultrasonic sensors.</p>
 <ul>
-<li>Real-time obstacle detection</li>
-<li>Autonomous navigation logic</li>
-<li>Hardware-software integration</li>
+<li>Arduino-based autonomous robot</li>
+<li>Obstacle detection & navigation</li>
+<li>Hardware–software integration</li>
 </ul>
-<a class="btn" href="https://github.com/yourusername/smart-floor-cleaning-robot" target="_blank">View Code</a>
 </div>
 
 <div class="card">
 <h3>📈 Ongoing: AI Model for Smart Marketing Optimization</h3>
-<p>Building AI system to analyze advertisement performance & social media engagement.</p>
 <ul>
 <li>Ad performance prediction</li>
 <li>Customer segmentation</li>
@@ -249,10 +222,10 @@ Completed multiple academic and practical AI-based projects.
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="fade-in">
 <h2>📫 Contact</h2>
 <p>
-🔗 <a href="https://www.linkedin.com/in/bhanuprakashb22" target="_blank">LinkedIn</a><br><br>
+🔗 <a href="https://www.linkedin.com/in/bhanuprakashb22" target="_blank">LinkedIn:https://www.linkedin.com/in/bhanuprakashb22</a><br><br>
 📧 <a href="mailto:bhanuprakashreddyb22@email.com">bhanuprakashreddyb22@email.com</a><br><br>
 📍 Hyderabad, Telangana, India
 </p>
@@ -263,9 +236,60 @@ Completed multiple academic and practical AI-based projects.
 </footer>
 
 <script>
-setTimeout(function(){
-document.getElementById("mainName").classList.add("move");
+
+/* Continuous Name Movement */
+setInterval(() => {
+document.getElementById("mainName").classList.toggle("move");
 }, 5000);
+
+
+/* Typing Animation */
+const textArray = [
+"Aspiring Data Analyst",
+"AI Model Builder",
+"Machine Learning Enthusiast"
+];
+
+let typingIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect() {
+const display = document.getElementById("typing");
+const current = textArray[typingIndex];
+
+if (!isDeleting) {
+display.textContent = current.substring(0, charIndex++);
+if (charIndex > current.length) {
+isDeleting = true;
+setTimeout(typeEffect, 1000);
+return;
+}
+} else {
+display.textContent = current.substring(0, charIndex--);
+if (charIndex < 0) {
+isDeleting = false;
+typingIndex = (typingIndex + 1) % textArray.length;
+}
+}
+
+setTimeout(typeEffect, isDeleting ? 50 : 100);
+}
+
+typeEffect();
+
+
+/* Fade-in on Scroll */
+const faders = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
+});
+});
+faders.forEach(fader => observer.observe(fader));
+
 </script>
 
 </body>

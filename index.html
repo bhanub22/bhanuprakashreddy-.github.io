@@ -7,24 +7,29 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
+<style>
+
 body{
 margin:0;
-font-family:'Poppins',sans-serif;
+font-family:'Poppins', sans-serif;
 background:#0f172a;
 color:#e2e8f0;
-scroll-behavior:smooth;
+line-height:1.6;
 }
 
-/* HEADER */
+/* HEADER (LEFT SIDE) */
 header{
-text-align:center;
-padding:70px 20px 25px;
+display:flex;
+align-items:center;
+gap:25px;
+padding:60px 8%;
 background:linear-gradient(135deg,#2563eb,#7c3aed);
+text-align:left;
 }
 
 header img{
-width:140px;
-height:140px;
+width:130px;
+height:130px;
 border-radius:50%;
 border:4px solid white;
 object-fit:cover;
@@ -33,29 +38,23 @@ object-fit:cover;
 h1{
 margin:10px 0 5px;
 font-size:30px;
-display:inline-block;
-transition: transform 1s ease;
+transition:transform 1s ease;
 }
 
 .move{
-transform: translateX(30px);
+transform:translateX(30px);
 }
 
 #typing{
-height:26px;
-display:block;
+height:28px;
 font-weight:500;
 }
 
 /* NAVIGATION */
 nav{
-background:#020617;
-padding:10px;
 text-align:center;
-position:sticky;
-top:0;
-z-index:1000;
-border-bottom:1px solid rgba(255,255,255,0.08);
+padding:12px;
+background:#020617;
 }
 
 nav a{
@@ -69,95 +68,42 @@ nav a:hover{
 color:white;
 }
 
-/* SECTION BOX STYLE */
+/* MAIN CONTENT CENTERED */
+.container{
+max-width:900px;
+margin:40px auto;
+padding:0 20px;
+}
+
 section{
-padding:25px 8%;
-margin:15px auto;
-max-width:1100px;
-background:#111827;
-border-radius:12px;
-box-shadow:0 4px 12px rgba(0,0,0,0.3);
+margin-bottom:35px;
 }
 
-/* Remove background from section wrapper */
-.education-bg,
-.smart-bg,
-.chat-bg,
-.oral-bg{
-background:none;
-}
-
-/* Clear Background Cards */
-.education-bg .card{
-background:
-linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
-url('cmr-campus-bg.png');
-background-size:cover;
-background-position:center;
-color:white;
-}
-
-.oral-bg{
-background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url('oral-result.png');
-background-size:cover;
-background-position:center;
-color:white;
-}
-
-.chat-bg{
-background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url('ai-chat-bot-bg.png');
-background-size:cover;
-background-position:center;
-color:white;
-}
-
-.smart-bg{
-background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url('smart-floor-bg.png');
-background-size:cover;
-background-position:center;
-color:white;
-}
-
-/* HEADINGS */
 h2{
 color:#38bdf8;
 margin-bottom:10px;
 font-size:22px;
 }
 
-/* CARDS */
-.card{
-padding:15px;
-margin-bottom:15px;
-border-radius:10px;
-background:#1e293b;
+ul{
+padding-left:20px;
+margin-top:8px;
 }
 
-/* SKILLS */
-.skills span{
-display:inline-block;
-background:#2563eb;
-padding:6px 10px;
-margin:4px;
-border-radius:6px;
-font-size:12px;
-}
-
-/* FOOTER */
 footer{
 text-align:center;
-padding:15px;
+padding:20px;
 background:#020617;
-font-size:12px;
-margin-top:20px;
+margin-top:40px;
+font-size:13px;
 }
 
+a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+</style>
 </head>
 
 <body>
@@ -165,8 +111,10 @@ margin-top:20px;
 <!-- HEADER -->
 <header>
 <img src="bhanu.jpg" alt="Bhanu Photo">
+<div>
 <h1 id="mainName">Bhanu Prakash Reddy 👋</h1>
 <p id="typing"></p>
+</div>
 </header>
 
 <!-- NAVIGATION -->
@@ -177,49 +125,39 @@ margin-top:20px;
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </nav>
-  
+
+<div class="container">
 
 <!-- ABOUT -->
-<section id="about" class="fade-in">
+<section id="about">
 <h2>About Me</h2>
 <p>
 I am deeply passionate about Data Analysis, Artificial Intelligence, and Big Data technologies. I specialize in leveraging Python and its powerful libraries such as Pandas, NumPy, and Matplotlib to extract meaningful insights from complex datasets.
 With a strong interest in AI-driven solutions, I focus on building and optimizing machine learning models using modern workflows and data-driven methodologies. I continuously explore advanced techniques in data preprocessing, model evaluation, and intelligent system design to solve real-world business problems efficiently and effectively.
 </p>
 </section>
-  
-  
 
 <!-- EDUCATION -->
-<section id="education" class="education-bg fade-in">
+<section id="education">
 <h2>🎓 Education</h2>
-<div class="card">
-<h3> Bachelor's Degree </h3>
-<p><strong>Field:</strong>  Computer Science and Engineering with AI/ML specilazation </p>
-<p><strong>Institution:</strong> CMR Technical Campus </p>
-<p><strong>Location:</strong> Hyderabad ,Telangana </p>
-<p><strong>Year:</strong> 2022 – 2026</p>
-</div>
+<p><strong>Bachelor's Degree</strong></p>
+<p>Computer Science and Engineering with AI/ML specialization</p>
+<p>CMR Technical Campus, Hyderabad, Telangana</p>
+<p>2022 – 2026</p>
 </section>
-  
 
 <!-- SKILLS -->
-<section id="skills" class="fade-in">
+<section id="skills">
 <h2>Skills</h2>
-<div class="skills">
-<span>Python</span><span>Python</span><span>C/C++/Java</span>
-<span>Matplotlib</span><span>SQL</span><span>NoSQL</span><span>MongoDB</span>
-<span>EDA</span><span>Big Data</span><span>LLMs</span>
-<span>AI Model Building</span>
-</div>
+<p>
+Python • C/C++/Java • Matplotlib • SQL • NoSQL • MongoDB • EDA • Big Data • LLMs • AI Model Building
+</p>
 </section>
-  
 
 <!-- PROJECTS -->
-<section id="projects" class="fade-in">
+<section id="projects">
 <h2>🚀 Projects</h2>
 
-<div class="card oral-bg">
 <h3>🦷 Multi-Class Oral Disease Detection using CNN</h3>
 <p><strong>87% Validation Accuracy</strong></p>
 <ul>
@@ -228,31 +166,21 @@ With a strong interest in AI-driven solutions, I focus on building and optimizin
 <li>Image preprocessing & augmentation</li>
 <li>Streamlit deployment for real-time prediction</li>
 </ul>
-</div>
-  
-  
-<div class="card chat-bg">
+
 <h3>🤖 AI-Based Dr. Chat Bot</h3>
 <ul>
 <li>Text & image input processing</li>
 <li>AI-agent simulated recommendation workflow</li>
 <li>87% accuracy response system</li>
 </ul>
-</div>
 
- 
-
-  
-<div class="card smart-bg">
 <h3>🧹 Smart Floor Cleaning Robot (IoT)</h3>
 <ul>
 <li>Arduino-based autonomous navigation</li>
 <li>Obstacle avoidance system</li>
 <li>Real-world robotics implementation</li>
 </ul>
-</div>
-  
-<div class="card">
+
 <h3>📈 Ongoing: AI Marketing Optimization Model</h3>
 <ul>
 <li>Ad performance prediction</li>
@@ -260,38 +188,42 @@ With a strong interest in AI-driven solutions, I focus on building and optimizin
 <li>AI-driven recommendation engine</li>
 </ul>
 <p><strong>Status:</strong> In Development 🚧</p>
-</div>
 
-  
 </section>
 
-  
 <!-- CONTACT -->
-<section id="contact" class="fade-in">
+<section id="contact">
 <h2>📫 Contact</h2>
 <p>
-🔗 <a href="https://www.linkedin.com/in/bhanuprakashb22" target="_blank">LinkedIn: https://www.linkedin.com/in/bhanuprakashb22</a><br><br>
-📧 <a href="mailto:bhanuprakashreddyb22@email.com">bhanuprakashreddyb22@email.com</a><br><br>
-📍 Hyderabad, Telangana, India
-</p>
+LinkedIn: <a href="https://www.linkedin.com/in/bhanuprakashb22" target="_blank">
+https://www.linkedin.com/in/bhanuprakashb22
   
+</a><br>
+Email: <a href="mailto:bhanuprakashreddyb22@email.com">
+bhanuprakashreddyb22@email.com
+  
+</a><br>
+Location: Hyderabad, Telangana, India
+</p>
 </section>
 
+
+</div>
+
+
   
-<!-- FOOTER -->
 <footer>
 © 2026 Bhanu Prakash Reddy | Built with GitHub Pages 🚀
 </footer>
 
 <script>
 
-/* Smooth Continuous Name Movement */
+/* Name moves every 5 seconds */
 setInterval(() => {
 document.getElementById("mainName").classList.toggle("move");
 }, 5000);
 
-
-/* Stable Typing Animation (No Layout Shift) */
+/* Stable Typing Animation */
 const textArray = [
 "Aspiring Data Analyst",
 "AI Model Builder",
@@ -326,21 +258,7 @@ setTimeout(typeEffect, isDeleting ? 40 : 80);
 
 typeEffect();
 
-
-/* Fade-in Animation (Stable) */
-const faders = document.querySelectorAll('.fade-in');
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-entry.target.classList.add('visible');
-}
-});
-},{ threshold: 0.2 });
-
-faders.forEach(fader => observer.observe(fader));
-
 </script>
-
 
 </body>
 </html>

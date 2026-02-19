@@ -42,8 +42,9 @@ color:white;
 /* HEADER */
 header{
 text-align:center;
-padding:120px 20px 60px; /* extra top padding for fixed nav */
+padding:120px 20px 60px;
 background:linear-gradient(135deg,#2563eb,#7c3aed);
+overflow:hidden;
 }
 
 header img{
@@ -57,6 +58,12 @@ object-fit:cover;
 h1{
 margin:15px 0 5px;
 font-size:32px;
+transition:transform 1.5s ease;
+}
+
+/* Animation after 5 seconds */
+.move{
+transform:translateX(50px);
 }
 
 /* SECTIONS */
@@ -100,6 +107,7 @@ background:#7c3aed;
 color:white;
 border-radius:8px;
 margin-top:10px;
+margin-right:10px;
 text-decoration:none;
 }
 
@@ -123,6 +131,7 @@ font-size:14px;
 <!-- NAVBAR -->
 <nav>
 <a href="#about">About</a>
+<a href="#education">Education</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -130,7 +139,7 @@ font-size:14px;
 <!-- HEADER -->
 <header>
 <img src="bhanu.jpg" alt="Bhanu Photo">
-<h1>Bhanu Prakash Reddy 👋</h1>
+<h1 id="mainName">Bhanu Prakash Reddy 👋</h1>
 <p>Aspiring Data Analyst | AI Model Builder | Machine Learning Enthusiast</p>
 </header>
 
@@ -144,20 +153,35 @@ Currently building AI models and learning LLM workflows to solve real-world busi
 </p>
 </section>
 
+<!-- EDUCATION -->
+<section id="education">
+<h2>🎓 Education</h2>
+
+<div class="card">
+<h3>Bachelor's Degree</h3>
+<p><strong>Field:</strong> Computer Science and Engineering with AI/ML specialization </p>
+<p><strong>Institution:</strong> CMR TECHNICAL CAMPUS</p>
+<p><strong>Year:</strong> 2022 – 2026</p>
+<p>
+Focused on Artificial Intelligence, Machine Learning, Data Analysis, and IoT systems.
+Completed multiple academic and practical AI-based projects.
+</p>
+</div>
+
+</section>
+
 <!-- SKILLS -->
 <section>
 <h2>Skills</h2>
 <div class="skills">
 <span>Python</span>
-<span>Pandas</span>
-<span>NumPy</span>
-<span>Matplotlib</span>
 <span>SQL</span>
 <span>MongoDB</span>
 <span>EDA</span>
 <span>Big Data</span>
 <span>LLMs</span>
 <span>AI Model Building</span>
+<span>ui</span>
 </div>
 </section>
 
@@ -167,14 +191,25 @@ Currently building AI models and learning LLM workflows to solve real-world busi
 
 <div class="card">
 <h3>🦷 Multi-Class Oral Disease Detection using CNN</h3>
-<p><strong>Description:</strong> Built a CNN-based multi-class classification model.</p>
+<p><strong>Description:</strong> CNN-based oral disease classification system using EfficientNet-B3.</p>
 <p><strong>Accuracy:</strong> 92% Validation Accuracy</p>
+
 <ul>
-<li>Image preprocessing & feature extraction</li>
-<li>Model evaluation metrics implemented</li>
-<li>Deployed as Streamlit web application</li>
+<li>Image preprocessing & augmentation</li>
+<li>Feature extraction</li>
+<li>Trained on 4,963 labeled dental images</li>
+<li>Deployed using Streamlit</li>
 </ul>
-<a class="btn" href="https://github.com/yourusername/oral-disease-detection-cnn" target="_blank">View Project</a>
+
+<h4>📸 Project Screenshots</h4>
+
+<img src="oral-home.png" width="100%" style="border-radius:10px; margin-bottom:15px;">
+<img src="oral-upload.png" width="100%" style="border-radius:10px; margin-bottom:15px;">
+<img src="oral-result.png" width="100%" style="border-radius:10px; margin-bottom:15px;">
+
+<a class="btn" href="https://your-streamlit-link.com" target="_blank">Live Demo</a>
+<a class="btn" href="https://github.com/yourusername/oral-disease-detection-cnn" target="_blank">View Code</a>
+
 </div>
 
 <div class="card">
@@ -186,7 +221,7 @@ Currently building AI models and learning LLM workflows to solve real-world busi
 <li>Intelligent recommendation system</li>
 <li>Multi-input data handling</li>
 </ul>
-<a class="btn" href="https://github.com/yourusername/ai-dr-chatbot" target="_blank">View Project</a>
+<a class="btn" href="https://github.com/yourusername/ai-dr-chatbot" target="_blank">View Code</a>
 </div>
 
 <div class="card">
@@ -197,7 +232,7 @@ Currently building AI models and learning LLM workflows to solve real-world busi
 <li>Autonomous navigation logic</li>
 <li>Hardware-software integration</li>
 </ul>
-<a class="btn" href="https://github.com/yourusername/smart-floor-cleaning-robot" target="_blank">View Project</a>
+<a class="btn" href="https://github.com/yourusername/smart-floor-cleaning-robot" target="_blank">View Code</a>
 </div>
 
 <div class="card">
@@ -226,6 +261,12 @@ Currently building AI models and learning LLM workflows to solve real-world busi
 <footer>
 © 2026 Bhanu Prakash Reddy | Built with GitHub Pages 🚀
 </footer>
+
+<script>
+setTimeout(function(){
+document.getElementById("mainName").classList.add("move");
+}, 5000);
+</script>
 
 </body>
 </html>

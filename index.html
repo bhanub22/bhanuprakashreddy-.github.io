@@ -7,8 +7,6 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-<style>
-
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
@@ -20,79 +18,89 @@ scroll-behavior:smooth;
 /* HEADER */
 header{
 text-align:center;
-padding:80px 20px 30px;
+padding:70px 20px 25px;
 background:linear-gradient(135deg,#2563eb,#7c3aed);
 }
 
 header img{
-width:150px;
-height:150px;
+width:140px;
+height:140px;
 border-radius:50%;
 border:4px solid white;
 object-fit:cover;
 }
 
 h1{
-margin:12px 0 5px;
-font-size:32px;
+margin:10px 0 5px;
+font-size:30px;
 display:inline-block;
 transition: transform 1s ease;
 }
 
-/* Name movement */
 .move{
 transform: translateX(30px);
 }
 
-/* Typing text fixed height to prevent jumping */
 #typing{
-height:28px;   /* fixed height prevents page jump */
+height:26px;
 display:block;
 font-weight:500;
 }
 
+/* NAVIGATION */
+nav{
+background:#020617;
+padding:10px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
 
-h2{
+nav a{
 color:#38bdf8;
-margin-bottom:12px;
-font-size:24px;
+margin:0 15px;
+text-decoration:none;
+font-weight:500;
 }
 
-/* Fade Animation */
-.fade-in{
-opacity:0;
-transform:translateY(20px);
-transition:all 0.9s ease-out;
+nav a:hover{
+color:white;
 }
 
-.fade-in.visible{
-opacity:1;
-transform:translateY(0);
-}
-
-/* CARDS */
-.card{
-background:#1e293b;
-padding:18px;
-margin-bottom:18px;
+/* SECTION BOX STYLE */
+section{
+padding:25px 8%;
+margin:15px auto;
+max-width:1100px;
+background:#111827;
 border-radius:12px;
-box-shadow:0 5px 14px rgba(0,0,0,0.3);
+box-shadow:0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* BACKGROUND SECTIONS */
-.education-bg{
+/* Remove background from section wrapper */
+.education-bg,
+.smart-bg,
+.chat-bg,
+.oral-bg{
+background:none;
+}
+
+/* Clear Background Cards */
+.education-bg .card{
 background:
-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
 url('cmr-campus-bg.png');
 background-size:cover;
 background-position:center;
 color:white;
 }
 
-.smart-bg{
+.oral-bg{
 background:
 linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url('smart-floor-bg.png');
+url('oral-result.png');
 background-size:cover;
 background-position:center;
 color:white;
@@ -107,34 +115,49 @@ background-position:center;
 color:white;
 }
 
-.oral-bg{
+.smart-bg{
 background:
-linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
-url('oral-result.png');
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+url('smart-floor-bg.png');
 background-size:cover;
 background-position:center;
 color:white;
+}
+
+/* HEADINGS */
+h2{
+color:#38bdf8;
+margin-bottom:10px;
+font-size:22px;
+}
+
+/* CARDS */
+.card{
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+background:#1e293b;
 }
 
 /* SKILLS */
 .skills span{
 display:inline-block;
 background:#2563eb;
-padding:7px 12px;
-margin:5px;
-border-radius:8px;
-font-size:13px;
+padding:6px 10px;
+margin:4px;
+border-radius:6px;
+font-size:12px;
 }
 
 /* FOOTER */
 footer{
 text-align:center;
-padding:18px;
+padding:15px;
 background:#020617;
-font-size:13px;
+font-size:12px;
+margin-top:20px;
 }
 
-</style>
 </head>
 
 <body>
